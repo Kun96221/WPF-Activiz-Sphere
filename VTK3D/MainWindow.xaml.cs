@@ -22,45 +22,10 @@ namespace VTK3D
     /// </summary>
     public partial class MainWindow : Window
     {
-        private vtkActor m_sa;
 
-        public static float[][] x = new float[10][];
         public MainWindow()
         {
             InitializeComponent();
-        }
-
-        private void renderWindowControl1_Load(object sender, EventArgs e)
-        {
-            //// Create a simple sphere. A pipeline is created.
-            //vtkSphereSource sphere = vtkSphereSource.New();
-            //sphere.SetThetaResolution(8);
-            //sphere.SetPhiResolution(16);
-
-            //vtkShrinkPolyData shrink = vtkShrinkPolyData.New();
-            //shrink.SetInputConnection(sphere.GetOutputPort());
-            //shrink.SetShrinkFactor(0.9);
-
-            //vtkPolyDataMapper mapper = vtkPolyDataMapper.New();
-            //mapper.SetInputConnection(shrink.GetOutputPort());
-
-            //// The actor links the data pipeline to the rendering subsystem
-            //vtkActor actor = vtkActor.New();
-            //actor.SetMapper(mapper);
-            //actor.GetProperty().SetColor(1, 0, 0);
-
-            //// Create components of the rendering subsystem
-            ////
-            //vtkRenderer ren1 = VTKControl.RenderWindow.GetRenderers().GetFirstRenderer();
-            //vtkRenderWindow renWin = VTKControl.RenderWindow;
-
-            //// Add the actors to the renderer, set the window size
-            ////
-            //ren1.AddViewProp(actor);
-            //renWin.SetSize(250, 250);
-            //renWin.Render();
-            //vtkCamera camera = ren1.GetActiveCamera();
-            //camera.Zoom(1.5);
         }
 
 
@@ -179,31 +144,6 @@ namespace VTK3D
 
             r.ResetCamera();
 
-
-            //Kitware.VTK.vtkAxesActor axa = new Kitware.VTK.vtkAxesActor();
-            //r.AddActor(axa);
-
-            ////string vtkVersion = Kitware.VTK.vtkVersion.GetVTKVersion();
-            ////vtkVersion = "VTK " + vtkVersion;
-            ////Console.WriteLine(vtkVersion);
-
-            ////this.label.Content = vtkVersion;
-
-            //axa.SetTotalLength(50.0, 50.0, 50.0);
-            //axa.SetConeRadius(0.1);
-            ////axa.SetAxisLabels(0);
-
-            //axa.GetXAxisCaptionActor2D().GetTextActor().SetTextScaleMode((int)Kitware.VTK.vtkTextActor.TEXT_SCALE_MODE_NONE_WrapperEnum.TEXT_SCALE_MODE_NONE);
-            //axa.GetXAxisCaptionActor2D().GetTextActor().GetTextProperty().SetFontSize(32);
-            //axa.GetYAxisCaptionActor2D().GetTextActor().SetTextScaleMode((int)Kitware.VTK.vtkTextActor.TEXT_SCALE_MODE_NONE_WrapperEnum.TEXT_SCALE_MODE_NONE);
-            //axa.GetYAxisCaptionActor2D().GetTextActor().GetTextProperty().SetFontSize(32);
-            //axa.GetZAxisCaptionActor2D().GetTextActor().SetTextScaleMode((int)Kitware.VTK.vtkTextActor.TEXT_SCALE_MODE_NONE_WrapperEnum.TEXT_SCALE_MODE_NONE);
-            //axa.GetZAxisCaptionActor2D().GetTextActor().GetTextProperty().SetFontSize(32);
-
-            //m_sa = this.CreateSphereActor(10.0);
-            //r.AddActor(m_sa);
-
-            //m_sa.SetPosition(25.0, 25.0, 25.0);
         }
         private vtkActor CreateSphereActor(double radius)
         {
